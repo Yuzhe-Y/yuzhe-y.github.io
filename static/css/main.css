@@ -159,7 +159,8 @@ section .main-body strong {
     margin-top: -80px;
     margin-bottom: 2rem;
     padding: 0 1.5rem;
-    z-index: 9000;
+    position: relative;
+    z-index: 100;
 }
 
 #avatar img {
