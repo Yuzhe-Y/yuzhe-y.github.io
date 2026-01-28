@@ -153,13 +153,17 @@ section .main-body strong {
 }
 
 
-#avatar {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -80px;
-    margin-bottom: 2rem;
-    padding: 0 1.5rem;
+/* Avatar container positioning */
+.container:has(#avatar) {
     position: relative;
+    height: 0;
+    overflow: visible;
+}
+
+#avatar {
+    position: absolute;
+    top: -80px;
+    right: 1.5rem;
     z-index: 100;
 }
 
@@ -174,8 +178,9 @@ section .main-body strong {
 
 @media screen and (max-width: 991px) {
     #avatar {
-        justify-content: center;
-        margin-top: -60px;
+        right: 50%;
+        transform: translateX(50%);
+        top: -60px;
     }
     
     #avatar img {
@@ -186,7 +191,7 @@ section .main-body strong {
 
 @media screen and (max-width: 576px) {
     #avatar {
-        margin-top: -50px;
+        top: -50px;
     }
     
     #avatar img {
